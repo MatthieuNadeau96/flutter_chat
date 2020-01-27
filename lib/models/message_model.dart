@@ -115,7 +115,7 @@ List<Message> chats = [
     unread: false,
   ),
   Message(
-    sender: greg,
+    sender: june,
     time: '11:30 AM',
     text: 'Hey, how\'s it going? What did you do today?',
     isLiked: false,

@@ -67,8 +67,14 @@ final User joseline = User(
   imageUrl: 'assets/images/joseline.jpg',
 );
 
+final User jacob = User(
+  id: 8,
+  name: 'Jacob',
+  imageUrl: 'assets/images/jacob.jpg',
+);
+
 // favorite contacts
-List<User> favorites = [adam, amy, james, june, josh];
+List<User> favorites = [adam, amy, james, june, josh, jacob, jenny];
 
 // example chats on home screen
 List<Message> chats = [

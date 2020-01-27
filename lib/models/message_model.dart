@@ -27,44 +27,44 @@ final User currentUser = User(
 
 final User josh = User(
   id: 2,
-  name: 'Current User',
-  imageUrl: 'assets\images\josh.jpg',
+  name: 'Josh',
+  imageUrl: 'assets/images/josh.jpg',
 );
 
 final User jenny = User(
   id: 3,
-  name: 'Current User',
-  imageUrl: 'assets\images\jenny.jpg',
+  name: 'Jenny',
+  imageUrl: 'assets/images/jenny.jpg',
 );
 
 final User james = User(
   id: 4,
-  name: 'Current User',
-  imageUrl: 'assets\images\james.jpg',
+  name: 'James',
+  imageUrl: 'assets/images/james.jpg',
 );
 
 final User june = User(
   id: 5,
-  name: 'Current User',
-  imageUrl: 'assets\images\june.jpg',
+  name: 'June',
+  imageUrl: 'assets/images/june.jpg',
 );
 
 final User amy = User(
   id: 6,
-  name: 'Current User',
-  imageUrl: 'assets\images\amy.jpg',
+  name: 'Amy',
+  imageUrl: 'assets/images/amy.jpg',
 );
 
 final User adam = User(
   id: 7,
-  name: 'Current User',
-  imageUrl: 'assets\images\adam.jpg',
+  name: 'Adam',
+  imageUrl: 'assets/images/adam.jpg',
 );
 
 final User joseline = User(
   id: 7,
-  name: 'Current User',
-  imageUrl: 'assets\images\joseline.jpg',
+  name: 'Joseline',
+  imageUrl: 'assets/images/joseline.jpg',
 );
 
 // favorite contacts

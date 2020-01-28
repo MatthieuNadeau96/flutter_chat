@@ -25,7 +25,19 @@ class _ChatScreenState extends State<ChatScreen> {
               bottom: 8.0,
               right: 80.0,
             ),
-      color: isMe ? Theme.of(context).accentColor : Color(0XFFFFEFEE),
+      padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 15.0),
+      decoration: BoxDecoration(
+        color: isMe ? Theme.of(context).accentColor : Color(0XFFFFEFEE),
+        borderRadius: isMe
+            ? BorderRadius.only(
+                topLeft: Radius.circular(15.0),
+                bottomLeft: Radius.circular(15.0),
+              )
+            : BorderRadius.only(
+                topRight: Radius.circular(15.0),
+                bottomRight: Radius.circular(15.0),
+              ),
+      ),
       child: Text(message.text),
     );
   }

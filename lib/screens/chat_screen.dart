@@ -1,3 +1,4 @@
+import 'package:chat/models/message_model.dart';
 import 'package:chat/models/user_model.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +12,28 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  _buildMessage(Message message, bool isMe) {
+    return Container(
+      margin: isMe
+          ? EdgeInsets.only(
+              top: 8.0,
+              bottom: 8.0,
+              left: 80.0,
+            )
+          : EdgeInsets.only(
+              top: 8.0,
+              bottom: 8.0,
+              right: 80.0,
+            ),
+      color: isMe ? Theme.of(context).accentColor : Color(0XFFFFEFEE),
+      child: Text(message.text),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
         centerTitle: true,
         title: Text(
@@ -30,6 +50,36 @@ class _ChatScreenState extends State<ChatScreen> {
             iconSize: 30.0,
             color: Colors.white,
             onPressed: () {},
+          ),
+        ],
+      ),
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30.0),
+                  topRight: Radius.circular(30.0),
+                ),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30.0),
+                  topRight: Radius.circular(30.0),
+                ),
+                child: ListView.builder(
+                  padding: EdgeInsets.only(top: 15.0),
+                  itemCount: messages.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    final Message message = messages[index];
+                    final bool isMe = message.sender.id == currentUser.id;
+                    return _buildMessage(message, isMe);
+                  },
+                ),
+              ),
+            ),
           ),
         ],
       ),

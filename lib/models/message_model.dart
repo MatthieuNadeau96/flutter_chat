@@ -132,6 +132,20 @@ List<Message> chats = [
 // EXAMPLE MESSAGES IN CHAT SCREEN
 List<Message> messages = [
   Message(
+    sender: currentUser,
+    time: '6:30 PM',
+    text: 'Huh?',
+    isLiked: false,
+    unread: true,
+  ),
+  Message(
+    sender: james,
+    time: '5:50 PM',
+    text: 'Same',
+    isLiked: true,
+    unread: true,
+  ),
+  Message(
     sender: james,
     time: '5:30 PM',
     text: 'Hey, how\'s it going? What did you do today?',

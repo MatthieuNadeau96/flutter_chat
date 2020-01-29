@@ -83,6 +83,30 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 
+  _buildMessageComposer() {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 8.0),
+      height: 70.0,
+      color: Colors.white,
+      child: Row(
+        children: <Widget>[
+          IconButton(
+            icon: Icon(Icons.photo),
+            iconSize: 25.0,
+            color: Theme.of(context).primaryColor,
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.send),
+            iconSize: 25.0,
+            color: Theme.of(context).primaryColor,
+            onPressed: () {},
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -135,6 +159,7 @@ class _ChatScreenState extends State<ChatScreen> {
               ),
             ),
           ),
+          _buildMessageComposer(),
         ],
       ),
     );

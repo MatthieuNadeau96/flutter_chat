@@ -98,7 +98,10 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           Expanded(
             child: TextField(
-              decoration: InputDecoration(hintText: 'Send a message...'),
+              textCapitalization: TextCapitalization.sentences,
+              decoration: InputDecoration.collapsed(
+                hintText: 'Send a message...',
+              ),
             ),
           ),
           IconButton(

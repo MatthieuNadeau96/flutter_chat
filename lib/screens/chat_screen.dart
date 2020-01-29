@@ -96,6 +96,11 @@ class _ChatScreenState extends State<ChatScreen> {
             color: Theme.of(context).primaryColor,
             onPressed: () {},
           ),
+          Expanded(
+            child: TextField(
+              decoration: InputDecoration(hintText: 'Send a message...'),
+            ),
+          ),
           IconButton(
             icon: Icon(Icons.send),
             iconSize: 25.0,
